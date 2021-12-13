@@ -1,0 +1,22 @@
+{
+  "name": "minimo_layout",
+  "version": "1.0.0",
+  "description": "Layout practicing",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.45.0"
+  },
+  "scripts": {
+    "test": "gulp sass"
+  },
+  "author": "RafalSkotarski",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^7.0.0"
+  }
+}
