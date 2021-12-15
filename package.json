@@ -1,0 +1,30 @@
+{
+  "name": "minimo_layout",
+  "version": "1.0.0",
+  "description": "Layout practicing",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rafalskotarski/minimo_layout/"
+  },
+  "devDependencies": {
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-csso": "^2.0.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-sass": "^5.0.0",
+    "node-sass": "^7.0.0",
+    "sass": "^1.45.0"
+  },
+  "scripts": {
+    "clean": "gulp clean",
+    "build": "gulp build",
+    "build:scss": "gulp sass",
+    "build:html": "gulp html",
+    "watch": "gulp watch"
+  },
+  "author": "Rafal Skotarski",
+  "license": "ISC",
+  "dependencies": {
+  }
+}
