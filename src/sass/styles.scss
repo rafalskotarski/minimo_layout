@@ -3,7 +3,7 @@ header {
   top: 0px;
 }
 
-.navbar {
+.navbar__container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -90,25 +90,26 @@ header {
     background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
 
-.navbar__menu span:first-child {
+.navbar__menu .navbar__burger-top-bun {
   transform-origin: 0% 0%;
 }
 
-.navbar__menu span:nth-last-child(2) {
+.navbar__menu .navbar__burger-bottom-bun {
   transform-origin: 0% 100%;
 }
-.navbar__menu input:checked ~ span {
+.navbar__menu input:checked ~ .navbar__burger-top-bun {
   opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
+  transform: rotate(45deg) translate(-3px, -2px);
   background: #726f6f;
 }
-.navbar__menu input:checked ~ span:nth-last-child(3) {
+.navbar__menu input:checked ~ .navbar__burger-patty {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-.navbar__menu input:checked ~ span:nth-last-child(2) {
-  transform: rotate(-45deg) translate(0, -1px);
+.navbar__menu input:checked ~ .navbar__burger-bottom-bun {
+  transform: rotate(-45deg) translate(0, 0);
+  background: #726f6f;
 }
 
 .navbar__list {
@@ -135,8 +136,4 @@ header {
 }
 .navbar__menu input:checked ~ ul {
   transform: none;
-}
-
-.blog-post-container {
-  display: flex;
 }
