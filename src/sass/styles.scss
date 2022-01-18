@@ -137,6 +137,6 @@ input:checked {
 
   li {
     padding: calc($gutter/3) 0;
-    font-size: calc($fontsize * 1.25);
+    font-size: $font-menu;
   }
 }
