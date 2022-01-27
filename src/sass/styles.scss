@@ -1,6 +1,9 @@
 @import "_fonts";
 @import "_variables";
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: Playfair Display, Arial, sans-serif;
   font-size: $font-small;
@@ -200,4 +203,19 @@ input:checked {
   font-weight: normal;
   line-height: 1.4em;
   padding: 15px 0;
+}
+
+.load-section {
+  text-align: center;
+  padding: $gutter;
+
+  .load-button {
+    text-align: center;
+    font-family: inherit;
+    font-size: $font-menu;
+    color: $main-gray;
+    background-color: white;
+    padding: calc($gutter / 2);
+    border: 1px solid $main-gray;
+  }
 }
