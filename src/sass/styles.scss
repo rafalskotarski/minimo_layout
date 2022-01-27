@@ -2,12 +2,13 @@
 @import "_variables";
 
 body {
-  font-family: Playfair, Arial, sans-serif;
+  font-family: Playfair Display, Arial, sans-serif;
   font-size: $font-small;
 }
 h1 {
+  font-family: "Ubuntu", sans-serif;
   font-size: $font-small;
-  font-weight: lighter;
+  font-weight: 100;
   color: $aside;
   padding-top: 15px;
   margin: 0;
@@ -16,7 +17,7 @@ h1 {
 h2 {
   font-size: $font-big;
   color: $main-gray;
-  font-style: italic;
+  font-style: regular;
   padding-top: 15px;
   margin: 0;
 }
@@ -169,14 +170,13 @@ input:checked {
 
 // Main section
 
-.teaser-section__container {
+.teaser-section__container,
+.teaser-section__intro,
+.teaser-section__teaser {
   padding-left: $gutter;
   padding-right: $gutter;
 }
-.teaser-section__intro {
-  padding-top: $gutter;
-  padding-bottom: $gutter;
-}
+
 .teaser-section__banner {
   object-fit: cover;
   width: 100%;
@@ -200,8 +200,4 @@ input:checked {
   font-weight: normal;
   line-height: 1.4em;
   padding: 15px 0;
-}
-.teaser-section__teaser {
-  padding-top: $gutter;
-  padding-bottom: $gutter;
 }
