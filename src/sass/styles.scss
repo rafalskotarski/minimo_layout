@@ -85,7 +85,7 @@ header {
   }
 }
 
-input {
+.navbar__input {
   display: block;
   width: 40px;
   height: 32px;
@@ -99,6 +99,28 @@ input {
   z-index: 2;
 
   -webkit-touch-callout: none;
+
+  &:checked {
+    & ~ .navbar__burger-top-bun {
+      opacity: 1;
+      transform: rotate(45deg) translate(-3px, -2px);
+      background: #726f6f;
+    }
+
+    & ~ .navbar__burger-patty {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    & ~ .navbar__burger-bottom-bun {
+      transform: rotate(-45deg) translate(0, 0);
+      background: #726f6f;
+    }
+
+    & ~ .navbar__list {
+      transform: none;
+    }
+  }
 }
 
 .navbar__burger {
@@ -125,27 +147,6 @@ input {
 
 .navbar__burger-bottom-bun {
   transform-origin: 0% 100%;
-}
-input:checked {
-  & ~ .navbar__burger-top-bun {
-    opacity: 1;
-    transform: rotate(45deg) translate(-3px, -2px);
-    background: #726f6f;
-  }
-
-  & ~ .navbar__burger-patty {
-    opacity: 0;
-    transform: rotate(0deg) scale(0.2, 0.2);
-  }
-
-  & ~ .navbar__burger-bottom-bun {
-    transform: rotate(-45deg) translate(0, 0);
-    background: #726f6f;
-  }
-
-  & ~ .navbar__list {
-    transform: none;
-  }
 }
 
 .navbar__list {
@@ -180,6 +181,10 @@ input:checked {
   padding-right: $gutter;
 }
 
+.teaser-section__intro-comment {
+  padding-bottom: calc(3 * $gutter);
+}
+
 .teaser-section__banner {
   object-fit: cover;
   width: 100%;
@@ -188,12 +193,14 @@ input:checked {
   object-fit: cover;
   margin: 0 auto;
   display: block;
+  padding-top: 15px;
   width: 100%;
 }
 .teaser-section__image {
   object-fit: cover;
   margin: 0 auto;
   display: block;
+  padding-top: 15px;
   width: 80%;
   height: 250px;
 }
@@ -217,5 +224,20 @@ input:checked {
     background-color: white;
     padding: calc($gutter / 2);
     border: 1px solid $main-gray;
+  }
+}
+
+.newsletter-section {
+  background-color: $support-gray;
+  padding: calc(4 * $gutter);
+  text-align: center;
+  font-size: $font-big;
+  font-weight: 500;
+
+  &__input {
+    background-color: inherit;
+    border-color: transparent;
+    border-bottom: solid 2px $main-gray;
+    width: 100%;
   }
 }
