@@ -1,34 +1,58 @@
 .teaser-section__ {
   &content-spacing {
-    padding-left: $gutter;
-    padding-right: $gutter;
+    padding-left: calc($gutter / 2);
+    padding-right: calc($gutter / 2);
+  }
+
+  &container {
+    text-align: left;
+    margin: 0 auto;
   }
 
   &banner {
     object-fit: cover;
-    width: 100%;
+    width: $width-full;
   }
 
   &image {
     object-fit: cover;
     margin: 0 auto;
     display: block;
+    width: $width-full;
 
     &--banner {
-      width: 100%;
+      width: $width-full;
     }
 
     &--teaser {
-      width: 80%;
-      height: 250px;
+      height: calc($gutter * 8);
+      object-fit: cover;
+      margin: 0 auto;
     }
   }
 
-  &text {
+  &comment {
+    padding-bottom: calc($gutter * 2);
+  }
+
+  &teaser {
+    object-fit: cover;
+    width: $width-narrow;
+    margin: 0 auto;
+  }
+
+  &text,
+  &intro-text {
     font-size: $font-small;
+    margin: 0 auto;
     color: $main-gray;
     font-weight: normal;
     line-height: $line-height;
+    text-align: justify;
     padding: calc($gutter / 2) 0;
+  }
+
+  &intro-text {
+    width: $width-full;
   }
 }
