@@ -24,10 +24,10 @@
     font-size: $font-medium;
     color: $main-gray;
     padding: calc($gutter * 3) $gutter 0 $gutter;
+  }
 
-    &-icon {
-      background-color: $support-gray;
-      padding: $gutter;
-    }
+  &social-icon {
+    background-color: $support-gray;
+    padding: $gutter;
   }
 }
