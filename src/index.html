@@ -34,7 +34,7 @@
           <img src="../assets/img/blog_logo.png" />
         </div>
         <nav class="navbar__menu">
-          <input type="checkbox" />
+          <input class="navbar__input" type="checkbox" />
           <span class="navbar__burger navbar__burger-top-bun"></span>
           <span class="navbar__burger navbar__burger-patty"></span>
           <span class="navbar__burger navbar__burger-bottom-bun"></span>
@@ -67,7 +67,7 @@
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </article>
-          <h1 class="teaser-section__comment">LEAVE A COMMENT</h1>
+          <h1 class="teaser-section__intro-comment">LEAVE A COMMENT</h1>
         </div>
         <div class="teaser-section__teaser teaser-section__content-spacing">
           <img
@@ -122,9 +122,20 @@
           </article>
         </div>
       </div>
-      <div class="newsletter-section"></div>
+      <div class="newsletter-section">
+        <label for="newsletter-section__input" class="newsletter-section__sign"
+          >Sign up for our newsletter!</label
+        >
+        <br />
+        <input
+          type="email"
+          class="newsletter-section__input"
+          id="newsletter-section__input"
+        />
+     </div>
       <div class="teaser-section__container teaser-section__content-spacing">
         <div class="teaser-section__teaser teaser-section__content-spacing">
+
           <img
             class="teaser-section__image teaser-section__image--teaser"
             src="../assets/img/teaser-section__image5.png"
@@ -151,7 +162,11 @@
           </article>
         </div>
       </div>
-      <button></button>
+      <div class="load-section">
+        <a href="#">
+          <button class="load-button">Load more</button>
+        </a>
+      </div>
     </main>
     <footer>
       <div class="footer__container">

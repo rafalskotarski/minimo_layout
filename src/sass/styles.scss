@@ -1,6 +1,9 @@
 @import "_fonts";
 @import "_variables";
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: Playfair Display, Arial, sans-serif;
   font-size: $font-small;
@@ -35,3 +38,4 @@ header {
 // partials
 @import "./partials/_navbar";
 @import "./partials/_teaser-section";
+
