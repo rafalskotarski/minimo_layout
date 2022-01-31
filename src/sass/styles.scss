@@ -3,10 +3,20 @@
 
 html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  overflow-x: hidden;
 }
 body {
   font-family: Playfair Display, Arial, sans-serif;
   font-size: $font-small;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  box-sizing: border-box;
+  margin: 0;
 }
 
 h1 {
@@ -51,7 +61,10 @@ header {
 }
 
 .newsletter-section {
+  box-sizing: border-box;
+  margin: 0;
   background-color: $support-gray;
+  color: $main-gray;
   padding: calc(4 * $gutter);
   text-align: center;
   font-size: $font-big;
@@ -68,3 +81,4 @@ header {
 // partials
 @import "./partials/_navbar";
 @import "./partials/_teaser-section";
+@import "./partials/_footer-section";

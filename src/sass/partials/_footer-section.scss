@@ -1,0 +1,33 @@
+.footer-section__ {
+  &container {
+    background-color: $support-gray;
+    padding: $gutter $gutter 0 $gutter;
+    text-align: center;
+    font-weight: $font-weight-newsletter;
+
+    a:hover,
+    a:visited,
+    a:link,
+    a:active {
+      color: $main-gray;
+      text-decoration: none;
+    }
+  }
+
+  &terms {
+    font-size: $font-medium;
+    padding: $gutter;
+    padding-bottom: 0;
+  }
+
+  &social {
+    font-size: $font-medium;
+    color: $main-gray;
+    padding: calc($gutter * 3) $gutter 0 $gutter;
+  }
+
+  &social-icon {
+    background-color: $support-gray;
+    padding: $gutter;
+  }
+}
