@@ -35,7 +35,36 @@ header {
   top: 0px;
 }
 
+.load-section {
+  text-align: center;
+  padding: $gutter;
+
+  .load-section__button {
+    text-align: center;
+    font-family: inherit;
+    font-size: $font-menu;
+    color: $main-gray;
+    background-color: white;
+    padding: calc($gutter / 2);
+    border: 1px solid $main-gray;
+  }
+}
+
+.newsletter-section {
+  background-color: $support-gray;
+  padding: calc(4 * $gutter);
+  text-align: center;
+  font-size: $font-big;
+  font-weight: $font-weight-newsletter;
+
+  &__input {
+    background-color: inherit;
+    border-color: transparent;
+    border-bottom: solid 2px $main-gray;
+    width: 100%;
+  }
+}
+
 // partials
 @import "./partials/_navbar";
 @import "./partials/_teaser-section";
-
