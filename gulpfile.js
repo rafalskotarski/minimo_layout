@@ -39,6 +39,9 @@ gulp.task("clean", () => del(["dist"]));
 gulp.task("build", gulp.series("clean", gulp.parallel("sass", "html")));
 
 gulp.task("watch", (done) => {
-  gulp.watch(["src/*.html", "src/sass/*.scss"], gulp.series("build"));
+  gulp.watch(
+    ["src/*.html", "src/sass/*.scss", "src/sass/**/*.scss"],
+    gulp.series("build")
+  );
   done();
 });
