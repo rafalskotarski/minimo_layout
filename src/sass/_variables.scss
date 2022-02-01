@@ -1,3 +1,9 @@
+@mixin mQ($res) {
+  @media (min-width: $res) {
+    @content;
+  }
+}
+
 $main-gray: #626262;
 $support-gray: #f3f3f3;
 $aside: #b4ad9e;

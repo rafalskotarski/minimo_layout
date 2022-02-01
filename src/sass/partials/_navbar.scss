@@ -2,10 +2,10 @@
   &container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     padding: $gutter calc($gutter * 2.5);
     flex-wrap: wrap;
-    background-color: white;
+    background-color: $white;
   }
 
   &banner {
@@ -43,7 +43,7 @@
       transition: color 0.3s ease;
 
       &:hover {
-        color: rgb(57, 60, 243);
+        color: $support-gray;
       }
     }
 
@@ -132,6 +132,55 @@
     li {
       padding: calc($gutter/3) 0;
       font-size: $font-menu;
+    }
+  }
+  @include mQ($second-breakpoint) {
+    &container {
+      padding: $gutter;
+    }
+
+    &menu {
+      top: 0px;
+      left: 0px;
+      }
+
+      input {
+        display: none;
+        width: 0px;
+        height: 0px;
+      }
+    }
+
+    &burger {
+      display: none;
+    }
+
+    &list {
+      position: relative;
+      display: inline;
+      right: 0px;
+      margin: 0 0 0 0;
+      padding: 0;
+      padding-top: 0;
+      align-self: flex-start;
+
+      background: transparent;
+      transform: none;
+
+      transition: none;
+
+      li {
+        display: inline;
+        padding: 0 0 0 $gutter;
+      }
+    }
+  }
+  @include mQ($third-breakpoint) {
+    &list {
+      li {
+        padding: 0 0 0 calc($gutter * 2);
+        font-size: $font-big;
+      }
     }
   }
 }

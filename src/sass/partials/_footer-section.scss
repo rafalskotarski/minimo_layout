@@ -30,4 +30,74 @@
     background-color: $support-gray;
     padding: $gutter;
   }
+
+  @include mQ($first-breakpoint) {
+    &container {
+      display: flex;
+      justify-content: space-evenly;
+      padding: $gutter;
+    }
+
+    &terms {
+      padding: calc($gutter * 0.5);
+    }
+
+    &social {
+      padding: calc($gutter * 0.5);
+    }
+
+    &social-icon {
+      padding: calc($gutter * 0.5);
+    }
+  }
+  @include mQ($second-breakpoint) {
+    &container {
+      justify-content: space-between;
+      padding: 0 $gutter 0 $gutter;
+      align-items: center;
+    }
+
+    &terms {
+      display: inline;
+      align-self: center;
+      padding: calc($gutter * 0.5);
+      font-size: $font-small;
+    }
+
+    &social {
+      display: flex;
+      font-size: $font-small;
+      padding: calc($gutter * 0.5);
+      font-size: $font-small;
+    }
+
+    &follow {
+      padding: calc($gutter * 0.5);
+    }
+
+    &social-icon {
+      padding: calc($gutter * 0.5);
+    }
+  }
+  @include mQ($third-breakpoint) {
+    &terms {
+      display: inline;
+      align-self: center;
+      padding: calc($gutter * 0.5);
+      font-size: $font-medium;
+    }
+
+    &social {
+      font-size: $font-medium;
+      align-items: center;
+    }
+
+    &follow {
+      padding: 0 calc($gutter * 0.5) 0 calc($gutter * 0.5);
+    }
+
+    &social-icon {
+      padding: 0 calc($gutter * 0.5) 0 calc($gutter * 0.5);
+    }
+  }
 }
