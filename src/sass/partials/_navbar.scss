@@ -2,10 +2,15 @@
   &container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     padding: $gutter calc($gutter * 2.5);
     flex-wrap: wrap;
-    background-color: white;
+    background-color: $white;
+  }
+  @include mQ($second-breakpoint) {
+    &container {
+      padding: $gutter;
+    }
   }
 
   &banner {
@@ -36,6 +41,13 @@
     -webkit-user-select: none;
     user-select: none;
 
+    @include mQ($second-breakpoint) {
+      &menu {
+        top: 0px;
+        left: 0px;
+      }
+    }
+
     a {
       text-decoration: none;
       color: #232323;
@@ -43,7 +55,7 @@
       transition: color 0.3s ease;
 
       &:hover {
-        color: rgb(57, 60, 243);
+        color: $support-gray;
       }
     }
 
@@ -84,6 +96,14 @@
         }
       }
     }
+
+    @include mQ($second-breakpoint) {
+      input {
+        display: none;
+        width: 0px;
+        height: 0px;
+      }
+    }
   }
 
   &burger {
@@ -102,6 +122,12 @@
 
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
       background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+
+  @include mQ($second-breakpoint) {
+    &burger {
+      display: none;
+    }
   }
 
   &burger-top-bun {
@@ -132,6 +158,37 @@
     li {
       padding: calc($gutter/3) 0;
       font-size: $font-menu;
+    }
+  }
+
+  @include mQ($second-breakpoint) {
+    &list {
+      position: relative;
+      display: inline;
+      right: 0px;
+      margin: 0 0 0 0;
+      padding: 0;
+      padding-top: 0;
+      align-self: flex-start;
+
+      background: transparent;
+      transform: none;
+
+      transition: none;
+
+      li {
+        display: inline;
+        padding: 0 0 0 $gutter;
+      }
+    }
+  }
+
+  @include mQ($third-breakpoint) {
+    &list {
+      li {
+        padding: 0 0 0 calc($gutter * 2);
+        font-size: $font-big;
+      }
     }
   }
 }
