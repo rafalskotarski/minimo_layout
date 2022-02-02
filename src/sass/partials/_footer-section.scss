@@ -13,41 +13,11 @@
       text-decoration: none;
     }
   }
-
-  &terms {
-    font-size: $font-medium;
-    padding: $gutter;
-    padding-bottom: 0;
-  }
-
-  &social {
-    font-size: $font-medium;
-    color: $main-gray;
-    padding: calc($gutter * 3) $gutter 0 $gutter;
-  }
-
-  &social-icon {
-    background-color: $support-gray;
-    padding: $gutter;
-  }
-
   @include mQ($first-breakpoint) {
     &container {
       display: flex;
       justify-content: space-evenly;
       padding: $gutter;
-    }
-
-    &terms {
-      padding: calc($gutter * 0.5);
-    }
-
-    &social {
-      padding: calc($gutter * 0.5);
-    }
-
-    &social-icon {
-      padding: calc($gutter * 0.5);
     }
   }
   @include mQ($second-breakpoint) {
@@ -56,27 +26,23 @@
       padding: 0 $gutter 0 $gutter;
       align-items: center;
     }
+  }
 
+  &terms {
+    font-size: $font-medium;
+    padding: $gutter;
+    padding-bottom: 0;
+  }
+  @include mQ($first-breakpoint) {
+    &terms {
+      padding: calc($gutter * 0.5);
+    }
+  }
+  @include mQ($second-breakpoint) {
     &terms {
       display: inline;
       align-self: center;
-      padding: calc($gutter * 0.5);
       font-size: $font-small;
-    }
-
-    &social {
-      display: flex;
-      font-size: $font-small;
-      padding: calc($gutter * 0.5);
-      font-size: $font-small;
-    }
-
-    &follow {
-      padding: calc($gutter * 0.5);
-    }
-
-    &social-icon {
-      padding: calc($gutter * 0.5);
     }
   }
   @include mQ($third-breakpoint) {
@@ -86,17 +52,54 @@
       padding: calc($gutter * 0.5);
       font-size: $font-medium;
     }
+  }
 
+  &social {
+    font-size: $font-medium;
+    color: $main-gray;
+    padding: calc($gutter * 3) $gutter 0 $gutter;
+  }
+  @include mQ($first-breakpoint) {
+    &social {
+      padding: calc($gutter * 0.5);
+    }
+  }
+  @include mQ($second-breakpoint) {
+    &social {
+      display: flex;
+      font-size: $font-small;
+    }
+  }
+  @include mQ($third-breakpoint) {
     &social {
       font-size: $font-medium;
       align-items: center;
     }
+  }
 
-    &follow {
+  &social-icon {
+    background-color: $support-gray;
+    padding: $gutter;
+  }
+  @include mQ($first-breakpoint) {
+    &social-icon {
+      padding: calc($gutter * 0.5);
+    }
+  }
+  @include mQ($third-breakpoint) {
+    &social-icon {
       padding: 0 calc($gutter * 0.5) 0 calc($gutter * 0.5);
     }
+  }
 
-    &social-icon {
+  @include mQ($second-breakpoint) {
+    &follow {
+      align-self: center;
+    }
+  }
+
+  @include mQ($third-breakpoint) {
+    &follow {
       padding: 0 calc($gutter * 0.5) 0 calc($gutter * 0.5);
     }
   }

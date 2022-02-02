@@ -8,10 +8,34 @@
     text-align: left;
     margin: 0 auto;
   }
+  @include mQ($second-breakpoint) {
+    &container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+  }
 
   &banner {
     object-fit: cover;
     width: $width-full;
+  }
+  @include mQ($first-breakpoint) {
+    &banner {
+      object-fit: cover;
+      width: calc($width-full * 1.2);
+      margin: 0 calc($gutter * -1);
+    }
+  }
+  @include mQ($second-breakpoint) {
+    &banner {
+      max-height: 500px;
+    }
+  }
+  @include mQ($third-breakpoint) {
+    &banner {
+      max-height: 700px;
+    }
   }
 
   &image {
@@ -23,6 +47,16 @@
     &--banner {
       width: $width-full;
     }
+    @include mQ($second-breakpoint) {
+      &--banner {
+        max-height: 500px;
+      }
+    }
+    @include mQ($third-breakpoint) {
+      &--banner {
+        max-height: 700px;
+      }
+    }
 
     &--teaser {
       height: calc($gutter * 8);
@@ -31,7 +65,7 @@
     }
   }
 
-  &comment {
+  &intro-comment {
     padding-bottom: calc($gutter * 2);
   }
 
@@ -39,6 +73,11 @@
     object-fit: cover;
     width: $width-narrow;
     margin: 0 auto;
+  }
+  @include mQ($second-breakpoint) {
+    &teaser {
+      flex-basis: 45%;
+    }
   }
 
   &text,
